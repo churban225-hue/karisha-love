@@ -1,0 +1,1494 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: white;
+
+    background: radial-gradient(circle at top, #32194f, #080014 70%);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* =========================
+   BACKGROUND CANVAS
+========================= */
+
+
+canvas {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -3;
+
+}
+
+
+
+
+
+#moon {
+
+
+    position: fixed;
+
+    top: 80px;
+    right: 100px;
+
+
+    width: 130px;
+    height: 130px;
+
+
+    background:
+
+    radial-gradient(circle at 35% 35%,
+    #fff,
+    #ffd6f7 40%,
+    #c89cff);
+
+
+    border-radius: 50%;
+
+
+    box-shadow:
+
+    0 0 40px #ffb7ff,
+    0 0 90px #ff77dd;
+
+
+    z-index:-2;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   LOADER
+========================= */
+
+
+.loader {
+
+
+position: fixed;
+
+inset:0;
+
+background:#080014;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+z-index:9999;
+
+animation: hideLoader 2s forwards;
+
+animation-delay:3s;
+
+
+}
+
+
+
+
+.loader-content {
+
+text-align:center;
+
+}
+
+
+
+.loader-heart {
+
+
+font-size:80px;
+
+animation:pulse 1s infinite;
+
+}
+
+
+
+
+.loader h1 {
+
+
+font-family:'Great Vibes', cursive;
+
+font-size:70px;
+
+}
+
+
+
+.loader p {
+
+margin-top:15px;
+
+color:#ffd4f5;
+
+}
+
+
+
+
+
+.loader-bar {
+
+
+width:250px;
+
+height:8px;
+
+background:#ffffff30;
+
+border-radius:20px;
+
+margin:30px auto;
+
+overflow:hidden;
+
+}
+
+
+
+.loader-bar span {
+
+
+display:block;
+
+height:100%;
+
+width:0;
+
+background:#ff6bd6;
+
+animation:loading 3s forwards;
+
+
+}
+
+
+
+
+
+@keyframes loading {
+
+to {
+width:100%;
+}
+
+}
+
+
+
+@keyframes hideLoader {
+
+to {
+
+opacity:0;
+
+visibility:hidden;
+
+}
+
+}
+
+
+
+
+
+@keyframes pulse {
+
+
+50% {
+
+transform:scale(1.2);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+ HERO
+========================= */
+
+
+section {
+
+
+padding:100px 10%;
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.hero h1 {
+
+
+font-family:'Great Vibes',cursive;
+
+
+font-size:100px;
+
+
+color:#ffb6e8;
+
+
+text-shadow:
+
+0 0 20px #ff5fcf;
+
+
+}
+
+
+
+
+
+.hero h2 {
+
+
+font-size:32px;
+
+margin:30px 0;
+
+}
+
+
+
+.hero p {
+
+
+font-size:20px;
+
+line-height:1.8;
+
+max-width:700px;
+
+margin:auto;
+
+color:#ffe8fa;
+
+
+}
+
+
+
+
+
+
+button {
+
+
+margin:25px 10px;
+
+
+padding:15px 35px;
+
+
+border:none;
+
+
+border-radius:50px;
+
+
+background:
+
+linear-gradient(
+45deg,
+#ff4fc3,
+#ff9be8
+);
+
+
+color:white;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+box-shadow:
+
+0 0 25px #ff4fc3;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+
+button:hover {
+
+
+transform:translateY(-5px) scale(1.05);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================
+ GALLERY
+========================= */
+
+
+.gallery h2,
+.music h2,
+.love-counter h2 {
+
+
+font-size:45px;
+
+
+font-family:'Great Vibes',cursive;
+
+
+color:#ffb5e8;
+
+
+}
+
+
+
+
+
+.photos {
+
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
+
+margin-top:50px;
+
+
+}
+
+
+
+
+.photo-card {
+
+
+background:
+
+rgba(255,255,255,.12);
+
+
+padding:20px;
+
+
+border-radius:25px;
+
+
+backdrop-filter:blur(10px);
+
+
+width:300px;
+
+
+transition:.4s;
+
+
+}
+
+
+
+
+
+.photo-card:hover {
+
+
+transform:
+
+translateY(-15px)
+rotate(2deg);
+
+
+box-shadow:
+
+0 0 40px #ff65d5;
+
+
+}
+
+
+
+
+
+.photo-card img {
+
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+
+border-radius:20px;
+
+
+}
+
+
+
+
+
+.photo-card p {
+
+
+margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+ LETTER
+========================= */
+
+
+
+.letter-box {
+
+
+max-width:800px;
+
+
+margin:auto;
+
+
+padding:50px;
+
+
+background:
+
+rgba(255,255,255,.12);
+
+
+border-radius:30px;
+
+
+backdrop-filter:blur(15px);
+
+
+box-shadow:
+
+0 0 50px #ff72d7;
+
+
+}
+
+
+
+
+.letter-box h2 {
+
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+color:#ffb6e9;
+
+
+}
+
+
+
+.letter-box p {
+
+
+font-size:20px;
+
+line-height:2;
+
+margin-top:30px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+ COUNTER
+========================= */
+
+
+.counter {
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+gap:25px;
+
+
+margin-top:40px;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+
+.counter div {
+
+
+width:150px;
+
+
+padding:30px;
+
+
+border-radius:25px;
+
+
+background:
+
+rgba(255,255,255,.15);
+
+
+backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.counter span {
+
+
+font-size:45px;
+
+font-weight:bold;
+
+
+color:#ffb6e8;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ FLOATING HEARTS
+========================= */
+
+
+.floating-hearts span {
+
+
+font-size:40px;
+
+
+display:inline-block;
+
+
+margin:20px;
+
+
+animation:
+
+float 3s infinite;
+
+
+}
+
+
+
+
+.floating-hearts span:nth-child(even){
+
+animation-delay:1s;
+
+}
+
+
+
+@keyframes float {
+
+
+50% {
+
+
+transform:translateY(-30px);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+.hero h1 {
+
+font-size:65px;
+
+}
+
+
+
+.hero h2 {
+
+font-size:24px;
+
+}
+
+
+#moon {
+
+right:20px;
+
+width:80px;
+
+height:80px;
+
+}
+
+
+}
+
+/* =========================
+   LETTER POPUP
+========================= */
+
+
+.letter-popup {
+
+position:fixed;
+
+inset:0;
+
+background:
+
+rgba(0,0,0,0.65);
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+opacity:0;
+
+visibility:hidden;
+
+
+transition:.5s;
+
+
+z-index:1000;
+
+
+}
+
+
+
+.letter-popup.active {
+
+
+opacity:1;
+
+visibility:visible;
+
+
+}
+
+
+
+
+.popup-content {
+
+
+position:relative;
+
+
+max-width:650px;
+
+
+width:90%;
+
+
+padding:45px;
+
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.2),
+rgba(255,150,220,.15)
+);
+
+
+
+border-radius:35px;
+
+
+backdrop-filter:blur(20px);
+
+
+box-shadow:
+
+0 0 60px #ff5fd1;
+
+
+
+transform:
+
+scale(.5)
+rotate(-10deg);
+
+
+
+transition:.6s;
+
+
+}
+
+
+
+.letter-popup.active .popup-content {
+
+
+transform:
+
+scale(1)
+rotate(0);
+
+
+}
+
+
+
+
+.popup-content h2 {
+
+
+font-family:'Great Vibes',cursive;
+
+
+font-size:60px;
+
+
+color:#ffb6e8;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.popup-content p {
+
+
+font-size:19px;
+
+
+line-height:2;
+
+
+}
+
+
+
+
+.close-letter {
+
+
+position:absolute;
+
+
+top:15px;
+
+right:20px;
+
+
+width:45px;
+
+height:45px;
+
+
+padding:0;
+
+
+font-size:30px;
+
+
+background:#ff5fbf;
+
+
+}
+
+
+
+
+
+.close-letter:hover {
+
+
+transform:rotate(90deg);
+
+
+}
+
+
+/* =========================
+   SAKURA PETALS 🌸
+========================= */
+
+
+.sakura-petal {
+
+position:fixed;
+
+top:-50px;
+
+z-index:20;
+
+pointer-events:none;
+
+
+font-size:25px;
+
+
+animation:
+
+sakuraFall linear forwards;
+
+
+}
+
+
+@keyframes sakuraFall {
+
+
+0% {
+
+transform:
+
+translateY(-50px)
+rotate(0deg);
+
+
+opacity:1;
+
+}
+
+
+
+50% {
+
+
+transform:
+
+translateX(80px)
+translateY(50vh)
+rotate(180deg);
+
+
+}
+
+
+
+100% {
+
+
+transform:
+
+translateX(-100px)
+translateY(110vh)
+rotate(360deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+   FIREFLIES ✨
+========================= */
+
+
+.firefly {
+
+
+position:fixed;
+
+
+width:8px;
+
+height:8px;
+
+
+background:#fff7a8;
+
+
+border-radius:50%;
+
+
+box-shadow:
+
+0 0 15px #fff7a8,
+0 0 30px #ffd86b;
+
+
+pointer-events:none;
+
+
+animation:
+
+fly 8s infinite;
+
+
+z-index:5;
+
+
+}
+
+
+
+
+@keyframes fly {
+
+
+0% {
+
+
+transform:
+
+translate(0,0);
+
+
+opacity:.2;
+
+
+}
+
+
+25% {
+
+
+opacity:1;
+
+
+}
+
+
+
+50% {
+
+
+transform:
+
+/* =========================
+   STAR SKY 2.0 🌌
+========================= */
+
+
+#stars {
+
+position:fixed;
+
+inset:0;
+
+z-index:-5;
+
+}
+
+
+
+#aurora {
+
+
+position:fixed;
+
+
+top:0;
+
+left:0;
+
+
+width:100%;
+
+height:50%;
+
+
+background:
+
+linear-gradient(
+120deg,
+transparent,
+rgba(120,255,220,.18),
+rgba(170,100,255,.2),
+transparent
+);
+
+
+
+filter:blur(50px);
+
+
+animation:
+
+auroraMove 12s infinite alternate;
+
+
+z-index:-4;
+
+
+}
+
+
+
+@keyframes auroraMove {
+
+
+from {
+
+transform:translateX(-20%);
+
+opacity:.4;
+
+}
+
+
+to {
+
+transform:translateX(20%);
+
+opacity:.8;
+
+}
+
+
+}
+
+
+
+
+
+
+/* METEORS ☄️ */
+
+
+.meteor {
+
+
+position:fixed;
+
+
+width:3px;
+
+
+height:120px;
+
+
+background:
+
+linear-gradient(
+white,
+transparent
+);
+
+
+transform:rotate(45deg);
+
+
+animation:
+
+meteorMove 1.5s linear;
+
+
+z-index:2;
+
+
+}
+
+
+
+
+
+@keyframes meteorMove {
+
+
+from {
+
+
+transform:
+translate(0,0)
+rotate(45deg);
+
+
+opacity:1;
+
+
+}
+
+
+to {
+
+
+transform:
+translate(-400px,400px)
+rotate(45deg);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+translate(80px,-100px);
+
+
+}
+
+
+
+75% {
+
+
+opacity:.5;
+
+
+}
+
+
+
+100% {
+
+
+transform:
+
+translate(-50px,-200px);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+/* FULLSCREEN PHOTO */
+
+.photo-viewer {
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,0.85);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:photoShow .4s ease;
+
+}
+
+
+.photo-viewer img {
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:25px;
+
+box-shadow:0 0 70px #ff66d9;
+
+animation:photoZoom .4s ease;
+
+}
+
+
+
+@keyframes photoShow {
+
+from {
+
+opacity:0;
+
+}
+
+to {
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes photoZoom {
+
+from {
+
+transform:scale(.7);
+
+}
+
+to {
+
+transform:scale(1);
+
+}
+
+}
+
+
+/* =========================
+   100 REASONS ❤️
+========================= */
+
+
+.reasons {
+
+padding-top:80px;
+
+}
+
+
+
+.reasons h2 {
+
+font-family:'Great Vibes',cursive;
+
+font-size:60px;
+
+color:#ffb6e8;
+
+}
+
+
+
+.reasons p {
+
+font-size:20px;
+
+color:#ffe5f8;
+
+}
+
+
+
+.reason-box {
+
+
+max-width:650px;
+
+
+min-height:170px;
+
+
+margin:40px auto;
+
+
+padding:40px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+
+background:
+
+rgba(255,255,255,.15);
+
+
+
+border-radius:30px;
+
+
+
+backdrop-filter:blur(15px);
+
+
+
+box-shadow:
+
+0 0 50px #ff5fd5;
+
+
+
+font-size:24px;
+
+
+
+text-align:center;
+
+
+
+}
+
+
+
+.reason-box.show {
+
+
+animation:
+
+reasonAnimation .5s;
+
+
+}
+
+
+
+
+@keyframes reasonAnimation {
+
+
+from {
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}

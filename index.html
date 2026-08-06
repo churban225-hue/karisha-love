@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>❤️ Кариша ❤️</title>
+
+<meta name="description" content="Для самой любимой девушки">
+
+
+<!-- Fonts -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- Icons -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- AOS -->
+
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- LOADER -->
+
+<div class="loader">
+
+<div class="loader-content">
+
+<div class="loader-heart">
+❤️
+</div>
+
+
+<h1>Кариша</h1>
+
+<p>
+Загружаю наши воспоминания...
+</p>
+
+
+<div class="loader-bar">
+
+<span></span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- BACKGROUND -->
+
+<canvas id="stars"></canvas>
+
+<canvas id="particles"></canvas>
+
+<canvas id="fireflies"></canvas>
+
+
+<div id="moon"></div>
+
+<div id="aurora"></div>
+
+<div id="constellations"></div>
+
+<div id="sakura-container"></div>
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-content" data-aos="fade-up">
+
+
+<h1>
+❤️ Кариша ❤️
+</h1>
+
+
+<h2>
+Ты — самое прекрасное,
+что произошло в моей жизни.
+</h2>
+
+
+<p>
+
+Каждый день рядом с тобой
+становится маленьким чудом.
+
+<br><br>
+
+Спасибо,
+что ты есть.
+
+<br>
+
+Я люблю тебя всем сердцем ❤️
+
+</p>
+
+
+
+<button class="open-letter" id="openLetter">
+
+💌 Открыть письмо
+
+</button>
+
+
+<button id="musicButton">
+
+🎵 Включить нашу песню
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- GALLERY -->
+
+
+<section class="gallery" data-aos="fade-up">
+
+
+<h2>
+📸 Наши воспоминания
+</h2>
+
+
+<p>
+Каждая фотография —
+маленькое воспоминание,
+которое я хочу хранить всю жизнь.
+</p>
+
+
+
+<div class="photos">
+
+
+<div class="photos">
+
+
+<div class="photo-card" data-aos="zoom-in">
+
+<img src="images/photo1.jpg">
+
+<div class="photo-text">
+
+❤️ Самая красивая девушка
+
+</div>
+
+</div>
+
+
+
+<div class="photo-card" data-aos="zoom-in" data-aos-delay="200">
+
+<img src="images/photo2.jpg">
+
+<div class="photo-text">
+
+✨ Самые счастливые моменты
+
+</div>
+
+</div>
+
+
+
+
+<div class="photo-card" data-aos="zoom-in" data-aos-delay="400">
+
+<img src="images/photo3.jpg">
+
+<div class="photo-text">
+
+💕 Только мы
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- LETTER -->
+
+<section class="letter" id="letterSection" data-aos="fade-up">
+
+
+<div class="letter-box">
+
+
+<h2>
+💌 Письмо для Кариши
+</h2>
+
+
+<p>
+
+Кариша...
+
+<br><br>
+
+Иногда мне кажется,
+что все хорошие моменты моей жизни
+начались именно тогда,
+когда появилась ты.
+
+<br><br>
+
+Ты стала человеком,
+рядом с которым хочется
+улыбаться,
+мечтать,
+смотреть на звезды,
+гулять до утра
+и просто быть счастливым.
+
+<br><br>
+
+Спасибо тебе
+за каждую улыбку,
+за каждый разговор,
+за каждое мгновение,
+которое мы проводим вместе.
+
+<br><br>
+
+Я очень дорожу тобой.
+
+<br><br>
+
+Я люблю тебя ❤️
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+<!-- MUSIC -->
+
+
+<section class="music">
+
+
+<h2>
+🎵 Наша песня
+</h2>
+
+
+<p>
+
+Восточный Округ —
+<br>
+
+Давай со мной за звездами
+
+</p>
+
+
+<audio id="music">
+
+<source src="music/song.mp3" type="audio/mp3">
+
+</audio>
+
+
+
+<button id="playMusic">
+
+▶ Включить песню
+
+</button>
+
+
+
+</section>
+
+
+
+<!-- 100 REASONS -->
+
+<section class="reasons" data-aos="fade-up">
+
+
+<h2>
+💌 100 причин почему я тебя люблю
+</h2>
+
+
+<p>
+Каждая причина — маленькая часть моей любви к тебе ❤️
+</p>
+
+
+
+<div class="reason-box">
+
+
+<div id="reasonText">
+
+Нажми кнопку,
+чтобы узнать причину ❤️
+
+</div>
+
+
+</div>
+
+
+
+<button id="nextReason">
+
+✨ Следующая причина
+
+</button>
+
+
+</section>
+
+
+
+<!-- COUNTER -->
+
+
+<section class="love-counter">
+
+
+<h2>
+❤️ Вместе уже...
+</h2>
+
+
+
+<div class="counter">
+
+
+<div>
+
+<span id="days">
+0
+</span>
+
+<p>
+Дней
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<span id="hours">
+0
+</span>
+
+<p>
+Часов
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<span id="minutes">
+0
+</span>
+
+<p>
+Минут
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<span id="seconds">
+0
+</span>
+
+<p>
+Секунд
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FINAL -->
+
+
+<section class="final">
+
+
+<h1>
+Кариша ❤️
+</h1>
+
+
+<div class="floating-hearts">
+
+
+<span>❤️</span>
+
+<span>💕</span>
+
+<span>💖</span>
+
+<span>❤️</span>
+
+<span>💗</span>
+
+
+</div>
+
+
+<p>
+Навсегда в моём сердце.
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- SCRIPTS -->
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="script.js"></script>
+
+
+<!-- LETTER POPUP -->
+
+<div class="letter-popup" id="letterPopup">
+
+    <div class="envelope">
+
+        <div class="letter-paper">
+
+            <button class="close-letter" id="closeLetter">
+                ×
+            </button>
+
+
+            <h2>
+                💌 Для Кариши
+            </h2>
+
+
+            <p>
+            Кариша...
+
+            <br><br>
+
+            Я хочу сказать тебе спасибо
+            за каждый день рядом со мной.
+
+            <br><br>
+
+            Ты делаешь мою жизнь ярче,
+            а мои дни счастливее.
+
+            <br><br>
+
+            Я ценю каждый момент с тобой.
+
+            <br><br>
+
+            Я люблю тебя ❤️
+
+            </p>
+
+
+          </div>
+
+       </div>
+
+   </div>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
